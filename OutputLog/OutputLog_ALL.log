@@ -1,0 +1,46 @@
+[INFO ] 2024-12-23 00:15:44.056 [main] BaseTest - Before Scenario
+[INFO ] 2024-12-23 00:15:44.062 [main] BaseTest - Before conditional hook Scenario
+[INFO ] 2024-12-23 00:15:44.063 [main] BaseTest - Before Step
+[INFO ] 2024-12-23 00:15:44.074 [main] BaseTest - After Step
+[INFO ] 2024-12-23 00:15:44.075 [main] BaseTest - Before Step
+[INFO ] 2024-12-23 00:15:46.906 [main] BaseTest - After Step
+[INFO ] 2024-12-23 00:15:46.907 [main] BaseTest - Before Step
+[INFO ] 2024-12-23 00:15:46.963 [main] BaseTest - After Step
+[INFO ] 2024-12-23 00:15:46.964 [main] BaseTest - Before Step
+[INFO ] 2024-12-23 00:15:47.575 [main] BaseTest - After Step
+[INFO ] 2024-12-23 00:15:47.576 [main] BaseTest - Before Step
+[INFO ] 2024-12-23 00:15:52.333 [main] BaseTest - After Step
+[INFO ] 2024-12-23 00:15:52.333 [main] BaseTest - Before Step
+[INFO ] 2024-12-23 00:15:52.364 [main] BaseTest - After Step
+[INFO ] 2024-12-23 00:15:52.364 [main] BaseTest - Before Step
+[INFO ] 2024-12-23 00:15:52.620 [main] BaseTest - After Step
+[INFO ] 2024-12-23 00:15:52.620 [main] BaseTest - Before Step
+[INFO ] 2024-12-23 00:15:55.256 [main] BaseTest - After Step
+[INFO ] 2024-12-23 00:15:55.261 [main] BaseTest - Before Step
+[INFO ] 2024-12-23 00:15:55.288 [main] BaseTest - After Step
+[INFO ] 2024-12-23 00:15:55.292 [main] BaseTest - Before Step
+[INFO ] 2024-12-23 00:15:55.513 [main] BaseTest - After Step
+[INFO ] 2024-12-23 00:15:55.513 [main] BaseTest - Before Step
+[INFO ] 2024-12-23 00:15:58.042 [main] BaseTest - After Step
+[INFO ] 2024-12-23 00:15:58.042 [main] BaseTest - Before Step
+[INFO ] 2024-12-23 00:15:58.120 [main] BaseTest - After Step
+[INFO ] 2024-12-23 00:15:58.121 [main] BaseTest - Before Step
+[INFO ] 2024-12-23 00:15:58.122 [main] CustomersStepDef - **** Logout
+[INFO ] 2024-12-23 00:16:02.645 [main] BaseTest - After Step
+[INFO ] 2024-12-23 00:16:02.645 [main] BaseTest - Tearing down...
+[INFO ] 2024-12-23 00:16:02.916 [main] BaseTest - After conditional hook Scenario
+[INFO ] 2024-12-23 04:12:36.928 [main] CustomersStepDef - **** Logout
+[INFO ] 2024-12-23 04:12:41.205 [main] BaseTest - Tearing down the driver...
+[INFO ] 2024-12-23 04:12:53.817 [main] CustomersStepDef - **** Logout
+[INFO ] 2024-12-23 04:12:58.073 [main] BaseTest - Tearing down the driver...
+[INFO ] 2024-12-23 04:13:10.685 [main] CustomersStepDef - **** Logout
+[INFO ] 2024-12-23 04:13:14.940 [main] BaseTest - Tearing down the driver...
+[INFO ] 2024-12-23 04:20:35.842 [main] BaseTest - Tearing down the driver...
+[INFO ] 2024-12-23 04:20:48.212 [main] BaseTest - Tearing down the driver...
+[INFO ] 2024-12-23 04:20:54.132 [main] BaseTest - Tearing down the driver...
+[INFO ] 2024-12-23 04:20:59.832 [main] BaseTest - Tearing down the driver...
+[INFO ] 2024-12-23 04:21:05.534 [main] BaseTest - Tearing down the driver...
+[INFO ] 2024-12-23 04:21:18.115 [main] CustomersStepDef - **** Logout
+[INFO ] 2024-12-23 04:21:22.315 [main] BaseTest - Tearing down the driver...
+[INFO ] 2024-12-23 04:24:58.937 [main] CustomersStepDef - **** Logout
+[INFO ] 2024-12-23 04:25:03.181 [main] BaseTest - Tearing down the driver...
