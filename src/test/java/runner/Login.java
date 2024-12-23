@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 		glue = {"stepDefinitions", "base"},
 		dryRun = false,
 		monochrome = true,
-		plugin = {"pretty", "html:target/reports/testReport.html"}
+		plugin = {"pretty", "html:target/reports/CucumberReport.html", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "timeline:target/test-output-thread/"}
 		)
 public class Login {
 
