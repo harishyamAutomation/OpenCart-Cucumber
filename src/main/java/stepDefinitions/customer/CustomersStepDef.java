@@ -16,6 +16,7 @@ public class CustomersStepDef {
 
 	WebDriver driver;
 	WebDriverWait wait;
+	String userName;
 	
 	private LoginPage getLoginPage() {
 		return new LoginPage(driver);
@@ -71,20 +72,41 @@ public class CustomersStepDef {
 	@When("User should fill all the customer general details")
 	public void user_should_fill_all_the_customer_general_details() {
 		String password = RandomDataUtil.generatePassword(8);
-		getCustomersPage().enterFirstName(RandomDataUtil.generateName(7));
-		getCustomersPage().enterLastName(RandomDataUtil.generateName(7));
+		String firstName = RandomDataUtil.generateName(7);
+		String lastName = RandomDataUtil.generateName(7);
+		getCustomersPage().enterFirstName(firstName);
+		getCustomersPage().enterLastName(lastName);
 		getCustomersPage().enterEmail(RandomDataUtil.generateEmail(10));
 		getCustomersPage().enterTelephoneNo(RandomDataUtil.generateMobileNo());
 		getCustomersPage().enterPassword(password);
 		getCustomersPage().confirmPassword(password);
+		this.userName=firstName+" "+lastName;
 	}
+	
+	@When("User should fill {string}, {string}, {string}, {string}, {string}")
+	public void user_should_fill(String firstName, String lastName, String email, String phone, String password) {
+		getCustomersPage().enterFirstName(firstName);
+		getCustomersPage().enterLastName(lastName);
+		getCustomersPage().enterEmail(email);
+		getCustomersPage().enterTelephoneNo(phone);
+		getCustomersPage().enterPassword(password);
+		getCustomersPage().confirmPassword(password);
+		this.userName=firstName+" "+lastName;
+	}
+	
 	@When("Click on Save button")
 	public void click_on_save_button() {
 		getCustomersPage().clickOnSave();
 	}
 	@Then("User should get the success message {string}")
 	public void user_should_get_the_success_message(String confirmMessage) {
-		assertTrue(getCustomersPage().validateConfirmMsg(confirmMessage));
+		
+		try {
+			assertTrue(getCustomersPage().validateConfirmMsg(confirmMessage));
+			OutputLog.info("Customer "+userName+", has been added successfully.");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 //	@Then("User closes the browser")

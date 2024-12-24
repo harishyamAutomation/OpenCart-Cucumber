@@ -36,6 +36,20 @@ Feature: Customer
     And Click on Save button
     Then User should get the success message "Success: You have modified customers!"
     And Logout the session
+    
+  Scenario Outline: Test to Add Multiple customers DDT
+    When User click on Add New button
+    And User should fill "<firstname>", "<lastname>", "<email>", "<phone>", "<password>"
+    And Click on Save button
+    Then User should get the success message "Success: You have modified customers!"
+    #And Logout the session
+    Examples:
+    	|firstname|lastname|email|phone|password|
+			|ICPJFNN|TRHFVHL|hMGxYnXeNSV@gmail.com|9701335357|Pzwr&7#6#0&4|
+			|CLCPJGA|PVAMPMK|yZukOZLvVEQ@gmail.com|9465058137|Dzkf#7_1_6%0|
+			|FAWTRJL|ATSZTET|auafyUUjPUC@gmail.com|9208040255|Oosh#2-1^6^1|
+			|CQWJRLJ|PPVCESH|BwguqJOikSR@gmail.com|9286855432|Llvm^9_6-7@6|
+			|YDTRZET|LMTYBBH|tNArLAzsnYd@gmail.com|9839023438|Cgfl~7!9_0&1|
 
   #And User closes the browser
   @Sanity
