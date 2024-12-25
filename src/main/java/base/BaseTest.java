@@ -6,10 +6,12 @@ import org.openqa.selenium.WebDriver;
 import core.DriverManager;
 import core.OutputLog;
 import io.cucumber.java.After;
+import io.cucumber.java.AfterAll;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeStep;
 import io.cucumber.java.Scenario;
+import util.ExcelUtils;
 import util.ScreenshotUtility;
 
 public class BaseTest {
@@ -48,5 +50,11 @@ public class BaseTest {
 	public void AfterScenario() {
 		OutputLog.info("Tearing down the driver...");
 		DriverManager.getDriverManager().quitDriver();
+	}
+	
+	@AfterAll
+	public static void afterAll() {
+//		OutputLog.info("Tearing down the driver...");
+//		DriverManager.getDriverManager().quitDriver();
 	}
 }

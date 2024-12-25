@@ -51,6 +51,14 @@ Feature: Customer
 			|CQWJRLJ|PPVCESH|BwguqJOikSR@gmail.com|9286855432|Llvm^9_6-7@6|
 			|YDTRZET|LMTYBBH|tNArLAzsnYd@gmail.com|9839023438|Cgfl~7!9_0&1|
 
+	@ExcelData
+	Scenario: Test to Add multiple customers with data from excel
+    When User click on Add New button
+    And User should fill all the customer details from testData excel
+    And Click on Save button
+    Then User should get the success message "Success: You have modified customers!"
+    #And Logout the session
+    
   #And User closes the browser
   @Sanity
   Scenario: Test to find customer by Customer Name

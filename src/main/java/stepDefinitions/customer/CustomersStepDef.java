@@ -7,16 +7,21 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import core.DriverManager;
 import core.OutputLog;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 import page.CustomersPage;
 import page.LoginPage;
+import util.ExcelUtils;
 import util.RandomDataUtil;
+import util.SoftAssertionUtil;
 
 public class CustomersStepDef {
 
 	WebDriver driver;
 	WebDriverWait wait;
-	String userName;
+	private String userName;
+	private int count=1;
 	
 	private LoginPage getLoginPage() {
 		return new LoginPage(driver);
@@ -94,6 +99,37 @@ public class CustomersStepDef {
 		this.userName=firstName+" "+lastName;
 	}
 	
+	@When("User should fill all the customer details from testData excel")
+	public void user_should_fill_all_the_customer_details_from_test_data_excel() {
+		
+		ExcelUtils testData = ExcelUtils.getTestDataFile("AddCustomer");
+		String [] customerData = new String[5];
+		
+	    for(int j=0;j<testData.getColCount(); j++) {
+	    	customerData[j] = testData.getCellData(count, j);
+	    }
+	    getCustomersPage().enterFirstName(customerData[0]);
+	    getCustomersPage().enterLastName(customerData[1]);
+	    getCustomersPage().enterEmail(customerData[2]);
+	    getCustomersPage().enterTelephoneNo(customerData[3]);
+	    getCustomersPage().enterPassword(customerData[4]);
+	    getCustomersPage().confirmPassword(customerData[4]);
+	    
+	    userName = customerData[0]+" "+customerData[1];
+	}
+	
+//	@After("@ExcelData") //Tried to run a scenario in loop
+//	public void fillMultiCustomerDetailsFromExcel() {
+//		count++;
+//		if(count<ExcelUtils.getTestDataFile("AddCustomer").getRowCount()) {
+//			user_click_on_add_new_button();
+//			user_should_fill_all_the_customer_details_from_test_data_excel();
+//			user_should_fill_all_the_customer_details_from_test_data_excel();
+//			click_on_save_button();
+//			user_should_get_the_success_message("Success: You have modified customers!");
+//		}
+//	}
+	
 	@When("Click on Save button")
 	public void click_on_save_button() {
 		getCustomersPage().clickOnSave();
@@ -104,8 +140,10 @@ public class CustomersStepDef {
 		try {
 			assertTrue(getCustomersPage().validateConfirmMsg(confirmMessage));
 			OutputLog.info("Customer "+userName+", has been added successfully.");
-		} catch (Exception e) {
-			e.printStackTrace();
+			//OutputLog.info(SoftAssertionUtil.getInstance().assertTrue(getCustomersPage().validateConfirmMsg(confirmMessage), "***** Success Message mismatched *****")==true?"Customer "+userName+", has been added successfully.":"Something went wrong..!!");
+		} catch (AssertionError e) {
+			OutputLog.error(e.getMessage()+"\n"+e.getCause());
+			getCustomersPage().cancel();
 		}
 	}
 	

@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">OpenCart Cucumber Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Dec 25, 2024 04:34:54 am</span></a>
+<a href="#"><span class="badge badge-primary">Dec 26, 2024 04:27:01 am</span></a>
 </li>
 </ul>
 </div>
@@ -66,13 +66,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Dec 25, 2024 04:34:54 am</h3>
+<h3>Dec 26, 2024 04:27:01 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Dec 25, 2024 04:35:23 am</h3>
+<h3>Dec 26, 2024 04:27:32 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -162,7 +162,7 @@
 </div></div>
 <script>
 var timeline = {
-"Customer":27.608
+"Customer":29.848
 };
 </script>
 <div class="row">
@@ -172,7 +172,7 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@Sanity</td>
+<td>@ExcelData</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -258,7 +258,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@Sanity</a><a class="dropdown-item" href="#">@tag</a>
+<a class="dropdown-item" href="#">@ExcelData</a><a class="dropdown-item" href="#">@tag</a>
 </ul>
 </li>
 </ul>
@@ -271,7 +271,7 @@ eventsCount: 5,
           <div class="test-detail">
             <p class="name">Customer</p>
             <p class="text-sm">
-              <span>4:34:55 am</span> / <span>00:00:27:608</span>
+              <span>4:27:01 am</span> / <span>00:00:29:848</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -280,9 +280,9 @@ eventsCount: 5,
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Customer</h5>
-<span class='badge badge-success'>12.25.2024 4:34:55 am</span>
-<span class='badge badge-danger'>12.25.2024 4:35:23 am</span>
-<span class='badge badge-default'>00:00:27:608</span>
+<span class='badge badge-success'>12.26.2024 4:27:01 am</span>
+<span class='badge badge-danger'>12.26.2024 4:27:31 am</span>
+<span class='badge badge-default'>00:00:29:848</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -294,7 +294,7 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Test to find customer by Customer Name</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Test to Add multiple customers with data from excel</div>
       </div>
     </div>
         <div class="collapse">
@@ -344,23 +344,23 @@ eventsCount: 5,
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.customer.CustomersStepDef.user_enter_customer_name()">
-                <span>When User enter customer Name</span>
+              <div class="step pass-bg" title="stepDefinitions.customer.CustomersStepDef.user_click_on_add_new_button()">
+                <span>When User click on Add New button</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.customer.CustomersStepDef.click_on_filter_button()">
-                <span>And click on Filter button</span>
+              <div class="step pass-bg" title="stepDefinitions.customer.CustomersStepDef.user_should_fill_all_the_customer_details_from_test_data_excel()">
+                <span>And User should fill all the customer details from testData excel</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.customer.CustomersStepDef.user_find_the_customer_by_customer_name()">
-                <span>Then User find the customer by customer name</span>
+              <div class="step pass-bg" title="stepDefinitions.customer.CustomersStepDef.click_on_save_button()">
+                <span>And Click on Save button</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepDefinitions.customer.CustomersStepDef.logout_the_session()">
-                <span>And Logout the session</span>
+              <div class="step pass-bg" title="stepDefinitions.customer.CustomersStepDef.user_should_get_the_success_message(java.lang.String)">
+                <span>Then User should get the success message "Success: You have modified customers!"</span>
       <div>
       </div>
               </div>
@@ -392,12 +392,12 @@ eventsCount: 5,
 <span class="meta">
 <span class='badge log pass-bg'>1</span>
 </span>
-<p class="name">@Sanity</p>
+<p class="name">@ExcelData</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@Sanity</h4>
+<h4>@ExcelData</h4>
 <span status="pass" class='badge log pass-bg'>1 passed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -411,11 +411,11 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>04:34:55 am</td>
+<td>04:27:01 am</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>Test to find customer by Customer Name</a>
+<a href="#" class="linked" test-id='1' id='2'>Test to Add multiple customers with data from excel</a>
 <div class="">
-<span class="badge badge-default">Customer.Test to find customer by Customer Name</span>
+<span class="badge badge-default">Customer.Test to Add multiple customers with data from excel</span>
 </div>
 </td>
 </tr>
@@ -447,11 +447,11 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>04:34:55 am</td>
+<td>04:27:01 am</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>Test to find customer by Customer Name</a>
+<a href="#" class="linked" test-id='1' id='2'>Test to Add multiple customers with data from excel</a>
 <div class="">
-<span class="badge badge-default">Customer.Test to find customer by Customer Name</span>
+<span class="badge badge-default">Customer.Test to Add multiple customers with data from excel</span>
 </div>
 </td>
 </tr>

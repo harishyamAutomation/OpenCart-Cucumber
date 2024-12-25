@@ -51,8 +51,9 @@ public class RandomDataUtil {
 	}
 	
 	public static void main(String args []) {
-		for(int i=0; i<5; i++) {
-			System.out.println("|"+generateName(7)+"|"+generateName(7)+"|"+generateEmail(11)+"|"+generateMobileNo()+"|"+generatePassword(8)+"|");
+		for(int i=0; i<10; i++) {
+			//System.out.println("|"+generateName(7)+"|"+generateName(7)+"|"+generateEmail(11)+"|"+generateMobileNo()+"|"+generatePassword(8)+"|");
+			System.out.println(generateEmail(11)+", "+generatePassword(8));
 		}
 	}
 	
