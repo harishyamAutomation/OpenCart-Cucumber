@@ -13,13 +13,13 @@ import util.HighlightUtil;
 
 public class LoginPage {
 
-	WebDriver ldriver;
+	WebDriver driver;
 	WebDriverWait wait;
 
-	public LoginPage(WebDriver rDriver)
+	public LoginPage(WebDriver driver)
 	{
-		ldriver=rDriver;
-		PageFactory.initElements(rDriver, this);
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
 	}
 	
 	
@@ -38,35 +38,35 @@ public class LoginPage {
 	
 	public void enterEmail(String emailAdd)
 	{
-		wait = new WebDriverWait(ldriver, Duration.ofSeconds(10));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(username));
 		
-		HighlightUtil.highlightElement(ldriver, username);
+		HighlightUtil.highlightElement(driver, username);
 		username.clear();
 		username.sendKeys(emailAdd);
 	}
 	
 	public void enterPassword(String pwd)
 	{
-		HighlightUtil.highlightElement(ldriver, password);
+		HighlightUtil.highlightElement(driver, password);
 		password.clear();
 		password.sendKeys(pwd);
 	}
 	
 	public void clickOnLoginButton()
 	{
-		HighlightUtil.highlightElement(ldriver, LoginBtn);
+		HighlightUtil.highlightElement(driver, LoginBtn);
 		LoginBtn.click();
 	}
 	
 	public void clickOnLogOutButton()
 	{
-		HighlightUtil.highlightElement(ldriver, logout);
+		HighlightUtil.highlightElement(driver, logout);
 		logout.click();
 	}
 	
 	public boolean validateTitle(String expectedTitle) {
-		String actualTitle = ldriver.getTitle();
+		String actualTitle = driver.getTitle();
 		return expectedTitle.equals(actualTitle)?true:false;
 	}
 }

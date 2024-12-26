@@ -16,7 +16,7 @@ import util.ScreenshotUtility;
 
 public class BaseTest {
 	
-	protected WebDriver driver = DriverManager.getDriverManager().getDriver();
+	private WebDriver driver;// = DriverManager.getDriverManager().getDriver();
 	
 	@Before //Execute before ever scenario
 	public void config() {
@@ -25,7 +25,7 @@ public class BaseTest {
 	
 	@Before("@Sanity") //Execute before every @Sanity tagged scenario
 	public void beforeSanity() {
-		
+		//driver = DriverManager.getDriverManager().getDriver();
 	}
 	
 	@BeforeStep() //Execute before every step

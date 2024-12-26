@@ -11,9 +11,9 @@ import page.LoginPage;
 public class LoginStepDef{
 	
 	WebDriver driver = DriverManager.getDriverManager().getDriver();
-	LoginPage loginPg;
+	LoginPage loginPg = new LoginPage(driver);
 	
-	@Given("User Launch Chrome browser")
+	//@Given("User Launch Chrome browser")
 	public void user_launch_chrome_browser() {
 
 		loginPg = new LoginPage(driver);

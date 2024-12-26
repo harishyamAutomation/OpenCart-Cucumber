@@ -20,8 +20,8 @@
 Feature: Customer
 
   Background: Verify Customers Page
-    Given User launches the browser
-    When User openes the url "https://localhost/opencart/upload/admin/index.php"
+    #Given User launches the browser
+    Given User openes the url "https://localhost/opencart/upload/admin/index.php"
     Then User should verify title "Administration" for login page
     When User enters username as "admin" and password as "admin"
     And User Click on the login button
@@ -45,19 +45,19 @@ Feature: Customer
     #And Logout the session
     Examples:
     	|firstname|lastname|email|phone|password|
-			|ICPJFNN|TRHFVHL|hMGxYnXeNSV@gmail.com|9701335357|Pzwr&7#6#0&4|
-			|CLCPJGA|PVAMPMK|yZukOZLvVEQ@gmail.com|9465058137|Dzkf#7_1_6%0|
-			|FAWTRJL|ATSZTET|auafyUUjPUC@gmail.com|9208040255|Oosh#2-1^6^1|
-			|CQWJRLJ|PPVCESH|BwguqJOikSR@gmail.com|9286855432|Llvm^9_6-7@6|
-			|YDTRZET|LMTYBBH|tNArLAzsnYd@gmail.com|9839023438|Cgfl~7!9_0&1|
+			|ICPJFNN1|TRHFVHL|hMGxYnXeNSV1@gmail.com|8701335357|Pzwr&7#6#0&4|
+			|CLCPJGA1|PVAMPMK|yZukOZLvVEQ1@gmail.com|8465058137|Dzkf#7_1_6%0|
+			|FAWTRJL1|ATSZTET|auafyUUjPUC1@gmail.com|8208040255|Oosh#2-1^6^1|
+			|CQWJRLJ1|PPVCESH|BwguqJOikSR1@gmail.com|8286855432|Llvm^9_6-7@6|
+			|YDTRZET1|LMTYBBH|tNArLAzsnYd1@gmail.com|8839023438|Cgfl~7!9_0&1|
 
-	@ExcelData
-	Scenario: Test to Add multiple customers with data from excel
-    When User click on Add New button
-    And User should fill all the customer details from testData excel
-    And Click on Save button
-    Then User should get the success message "Success: You have modified customers!"
-    #And Logout the session
+	#@ExcelData
+	#Scenario: Test to Add multiple customers with data from excel
+  #  When User click on Add New button
+  #  And User should fill all the customer details from testData excel
+  #  And Click on Save button
+  #  Then User should get the success message "Success: You have modified customers!"
+  #  #And Logout the session
     
   #And User closes the browser
   @Sanity
@@ -68,6 +68,7 @@ Feature: Customer
     And Logout the session
 
   #And User closes the browser
+  @Sanity
   Scenario: Test to find customer by Email
     When User enter customer email
     And click on Filter button

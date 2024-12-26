@@ -29,9 +29,7 @@ public class DriverManager {
 	}
 	
 	public WebDriver getDriver() {
-		if(driver==null) {
 			driver = createDriver();
-		}
 		return driver;
 	}
 	

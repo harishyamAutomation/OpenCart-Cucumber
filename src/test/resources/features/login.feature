@@ -20,8 +20,8 @@ Feature: Login
 
 @Sanity
 Scenario: Successful Login with Valid Credentials 
-	Given User Launch Chrome browser 
-	When User opens URL "https://localhost/opencart/upload/admin/"
+	#Given User Launch Chrome browser 
+	Given User opens URL "https://localhost/opencart/upload/admin/"
 	And User enters Username as "admin" and Password as "admin" 
 	And Click on Login 
 	Then Page Title should be "Dashboard" 
@@ -29,8 +29,8 @@ Scenario: Successful Login with Valid Credentials
 	Then Page Title should be "Administration"
 
 Scenario Outline: Successful Login with Valid Credentials DDT
-	Given User Launch Chrome browser 
-	When User opens URL "https://localhost/opencart/upload/admin/"
+	#Given User Launch Chrome browser 
+	Given User opens URL "https://localhost/opencart/upload/admin/"
 	And User enters Username as "<username>" and Password as "<password>" 
 	And Click on Login 
 	Then Page Title should be "Dashboard" 
