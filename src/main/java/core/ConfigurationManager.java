@@ -29,4 +29,16 @@ public class ConfigurationManager {
 			throw new IllegalAccessError("Please specify a valid browser, got "+browserName+", Expected list : "+DriverType.CHROME+", "+DriverType.FIREFOX+", "+DriverType.EDGE);
 		}
 	}
+	
+	public DriverType getBrowser(String browserName) {
+		if(browserName.equalsIgnoreCase("chrome")) {
+			return DriverType.CHROME;
+		}else if(browserName.equalsIgnoreCase("firefox")) {
+			return DriverType.FIREFOX;
+		}else if(browserName.equalsIgnoreCase("edge")) {
+			return DriverType.EDGE;
+		}else {
+			throw new IllegalAccessError("Please specify a valid browser, got "+browserName+", Expected list : "+DriverType.CHROME+", "+DriverType.FIREFOX+", "+DriverType.EDGE);
+		}
+	}
 }

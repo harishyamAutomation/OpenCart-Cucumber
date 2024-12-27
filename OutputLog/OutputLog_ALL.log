@@ -418,3 +418,16 @@ null
 [INFO ] 2024-12-27 04:04:52.005 [main] BaseTest - Tearing down the driver...
 [INFO ] 2024-12-27 04:04:57.728 [main] BaseTest - Tearing down the driver...
 [INFO ] 2024-12-27 04:05:03.356 [main] BaseTest - Tearing down the driver...
+[INFO ] 2024-12-27 04:56:05.005 [main] CustomersStepDef - Customer THMLZEJ KCMYDYW, has been added successfully.
+[INFO ] 2024-12-27 04:56:05.005 [main] CustomersStepDef - **** Logout
+[INFO ] 2024-12-27 04:56:27.238 [main] CustomersStepDef - Customer ICPJFNN1 TRHFVHL, has been added successfully.
+[INFO ] 2024-12-27 04:56:45.125 [main] CustomersStepDef - Customer CLCPJGA1 PVAMPMK, has been added successfully.
+[INFO ] 2024-12-27 04:57:03.231 [main] CustomersStepDef - Customer FAWTRJL1 ATSZTET, has been added successfully.
+[INFO ] 2024-12-27 04:57:20.808 [main] CustomersStepDef - Customer CQWJRLJ1 PPVCESH, has been added successfully.
+[INFO ] 2024-12-27 04:57:38.613 [main] CustomersStepDef - Customer YDTRZET1 LMTYBBH, has been added successfully.
+[INFO ] 2024-12-27 04:57:51.720 [main] CustomersStepDef - **** Logout
+[INFO ] 2024-12-27 04:58:08.881 [main] CustomersStepDef - **** Logout
+[INFO ] 2024-12-27 05:01:41.331 [main] CustomersStepDef - Customer ENCERTZ IXQSPGT, has been added successfully.
+[INFO ] 2024-12-27 05:01:41.331 [main] CustomersStepDef - **** Logout
+[INFO ] 2024-12-27 05:33:39.331 [main] CustomersStepDef - Customer XVSWWRD CZULAOG, has been added successfully.
+[INFO ] 2024-12-27 05:33:39.331 [main] CustomersStepDef - **** Logout

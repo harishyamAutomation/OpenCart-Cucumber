@@ -21,9 +21,20 @@ public class DriverManager {
 		driverType = ConfigurationManager.getConfigManager().getBrowser();
 	}
 	
+	private DriverManager(String browserName) {
+		driverType = ConfigurationManager.getConfigManager().getBrowser(browserName);
+	}
+	
 	public static DriverManager getDriverManager() {
 		if(instance==null) {
 			instance =  new DriverManager();
+		}
+		return instance;
+	}
+
+	public static DriverManager getDriverManager(String browserName) {
+		if(instance==null) {
+			instance =  new DriverManager(browserName);
 		}
 		return instance;
 	}

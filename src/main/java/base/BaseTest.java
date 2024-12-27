@@ -1,7 +1,15 @@
 package base;
 
-import org.openqa.selenium.WebDriver;
+import java.util.Optional;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.testng.annotations.Parameters;
 
 import core.DriverManager;
 import core.OutputLog;
@@ -12,15 +20,21 @@ import io.cucumber.java.Before;
 import io.cucumber.java.BeforeStep;
 import io.cucumber.java.Scenario;
 import util.ExcelUtils;
+import util.PropertyReader;
 import util.ScreenshotUtility;
 
 public class BaseTest {
 	
-	private WebDriver driver;// = DriverManager.getDriverManager().getDriver();
+	private static WebDriver driver;// = DriverManager.getDriverManager().getDriver();
 	
-	@Before //Execute before ever scenario
-	public void config() {
-        
+	@Parameters("browser")
+	//Execute before ever scenario
+	@Before
+	public static WebDriver config() {
+			if(driver==null) {
+	        	driver = DriverManager.getDriverManager().getDriver();
+	        }
+        return driver;
 	}
 	
 	@Before("@Sanity") //Execute before every @Sanity tagged scenario
